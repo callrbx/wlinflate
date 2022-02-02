@@ -1,0 +1,17 @@
+[package]
+name = "wlinflate"
+version = "0.1.0"
+edition = "2021"
+authors = ["icon [drew@parker.systems]"]
+
+[lib]
+name = "libwlinflate"
+path = "src/wordlist.rs"
+
+[[bin]]
+name = "wlinflate"
+path = "src/main.rs"
+
+[dependencies]
+ctor = "^0.1.21"
+structopt = { version = "^0.3.25", default-features = false }
