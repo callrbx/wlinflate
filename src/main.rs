@@ -3,8 +3,8 @@ use std::{
     path::PathBuf,
 };
 
-use libwlinflate::Wordlist;
 use structopt::StructOpt;
+use wlinflate::Wordlist;
 
 #[derive(Debug, StructOpt, Clone)]
 #[structopt(
