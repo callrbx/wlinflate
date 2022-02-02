@@ -9,7 +9,7 @@ license-file = "./LICENSE"
 repository = "https://github.com/callrbx/wlinflate"
 
 [lib]
-name = "libwlinflate"
+name = "wlinflate"
 path = "src/wordlist.rs"
 
 [[bin]]
