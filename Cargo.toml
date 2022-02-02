@@ -3,6 +3,10 @@ name = "wlinflate"
 version = "0.1.0"
 edition = "2021"
 authors = ["icon [drew@parker.systems]"]
+description = "simple tool to expand a wordlist with prepends, appends, extensions, and substitutions"
+readme = "./README.md"
+license-file = "./LICENSE"
+repository = "https://github.com/callrbx/wlinflate"
 
 [lib]
 name = "libwlinflate"
