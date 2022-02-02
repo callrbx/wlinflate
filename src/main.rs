@@ -13,6 +13,8 @@ use structopt::StructOpt;
     about = "simple tool to expand a wordlist with prepends, appends, extensions, and substitutions"
 )]
 struct Args {
+    #[structopt(short = "v", long = "verbose", help = "enable basic logging")]
+    verbose: bool,
     #[structopt(short = "p", long = "prepend", help = "prepend wordlist words (csv)")]
     prepend: Option<String>,
     #[structopt(short = "a", long = "append", help = "append wordlist words (csv)")]
@@ -39,6 +41,7 @@ struct Args {
 
 fn main() -> io::Result<()> {
     let args = Args::from_args();
+    let mut count: usize = 0;
     let file;
     let stdout = stdout();
     let stdout_lock = stdout.lock();
@@ -59,12 +62,22 @@ fn main() -> io::Result<()> {
         args.extensions,
     );
 
+    if args.verbose {
+        println!("[*] Orginal Wordlist Size: {}", wl.base_count);
+        println!("[*] Estimated Inflated Size: {}", wl.total_count);
+    }
+
     for word in wl {
         writer.write(word.as_bytes())?;
         writer.write(b"\n")?;
+        count += 1;
     }
 
     writer.flush()?;
+
+    if args.verbose {
+        println!("[*] Inflated Wordlist Size: {}", count);
+    }
 
     return Ok(());
 }
