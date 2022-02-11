@@ -51,4 +51,5 @@ Publish:
   script:
     - cargo publish --dry-run
     - cargo login $TOKEN
+    - cargo package
     - cargo publish
