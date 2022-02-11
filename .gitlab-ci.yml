@@ -46,7 +46,6 @@ Publish:
     variables: [ $publish == "true" ]
   variables:
     TOKEN: "$CRATES_TOKEN"
-
   script:
     - cargo publish --dry-run
     - cargo login $TOKEN
