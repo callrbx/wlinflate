@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["icon [drew@parker.systems]"]
 description = "simple tool to expand a wordlist with prepends, appends, extensions, and substitutions"
 readme = "./README.md"
-license-file = "./LICENSE"
+license = "GPL-3.0"
 repository = "https://github.com/callrbx/wlinflate"
 
 [lib]
