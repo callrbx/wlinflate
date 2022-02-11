@@ -2,6 +2,7 @@ stages:
   - lint
   - build
   - test
+  - publish
 
 .container:
   image: rust
@@ -42,6 +43,7 @@ Publish:
   needs: ["Test"]
   extends:
     - .container
+  stage: publish
   only:
     variables: [ $publish == "true" ]
   variables:
