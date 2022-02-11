@@ -1,3 +1,5 @@
+![Gitlab Pipeline Status](https://img.shields.io/gitlab/pipeline-status/drew/wlinflate?branch=main&gitlab_url=https%3A%2F%2Fgitlab.parker.systems&style=for-the-badge)
+
 ## Wordlist Inflator
 Wordlist Inflator (wlinflate) is a simple utility to take an existing wordlist, and quickly customize it for a specific need. 
 
