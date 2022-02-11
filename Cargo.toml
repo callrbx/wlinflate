@@ -1,6 +1,6 @@
 [package]
 name = "wlinflate"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["icon [drew@parker.systems]"]
 description = "simple tool to expand a wordlist with prepends, appends, extensions, and substitutions"
